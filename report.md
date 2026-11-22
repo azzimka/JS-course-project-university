@@ -15,3 +15,13 @@ Steps:
 > Browsers cannot understand SCSS they understand only CSS, so we should have a translator. and this translator we call SASS compilator which will translate it into a readable CSS file.
 2. npm install --save-dev sass
 > It will install SASS compiler to our computer. --save-dev flag means add sass to "devDepencies", and also do not forget add node-modules to .gitignore, because it stores tens of megabytes of dependencies.
+3. Configure package.json scripts:
+```json
+ "scripts": {
+    "postinstall": "cd ./test && npm i || true",
+    "test": "cd ./test && npm run test",
+    "build": "echo \"Dummy build script for Autocode\"",
+    "build:scss": "sass src/styles/style.scss src/dist/style.css && sass src/styles/style.scss src/dist/style.min.css --style=compressed",
+    "watch:scss": "sass --watch src/styles:src/dist"
+  },
+```

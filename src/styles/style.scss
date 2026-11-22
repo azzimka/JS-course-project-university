@@ -1,0 +1,12 @@
+@use "mobile";
+
+$primary-color: "#2b6cb0";
+$font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+    font-family: $font-main;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc;
+}
+

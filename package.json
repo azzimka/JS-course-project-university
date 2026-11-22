@@ -2,6 +2,23 @@
   "scripts": {
     "postinstall": "cd ./test && npm i || true",
     "test": "cd ./test && npm run test",
-    "build": "echo \"Dummy build script for Autocode\""
+    "build": "echo \"Dummy build script for Autocode\"",
+    "build:scss": "sass src/styles/style.scss src/dist/style.css && sass src/styles/style.scss src/dist/style.min.css --style=compressed",
+    "watch:scss": "sass --watch src/styles:src/dist"
+  },
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "1. Please, place all your `SCSS` styles to `src/styles` folder. 2. The `package.json` file is already created, please don't delete NPM scripts which are already there. This file should look like this when you initiate the project:",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://autocode.git.epam.com/azimbek_gulyamov/final-project-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.108.2"
   }
 }
